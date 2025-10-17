@@ -2,10 +2,21 @@ import express from "express";
 
 const app = express();
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Max-Age', '86400');
+
+    res.setHeader("Content-Type", "application/json")
+    next();
+  });
+
 app.get("/", (req, res) => {
   res
     .status(200)
-    .setHeader("Content-Type", "application/json")
     .json({ message: "Server is running, visit /me for user data" });
 });
 
@@ -25,12 +36,12 @@ app.get("/me", async (req, res) => {
     const data = await fetch("https://catfact.ninja/fact");
     const fact = await data.json();
     me_data.fact = fact.fact;
-    res.status(200).setHeader("Content-Type", "application/json").json(me_data);
+    res.status(200).json(me_data);
   } catch (error) {
     me_data.fact = "Unable to fetch cat fact at this time";
     me_data.status = error.message;
     console.error(error);
-    res.status(500).setHeader("Content-Type", "application/json").json(me_data);
+    res.status(500).json(me_data);
   }
 });
 

@@ -1,16 +1,23 @@
 {
   "name": "stage-0",
   "version": "1.0.0",
-  "description": "",
+  "description": "HNG Stage 0 Backend API - Express.js REST API with user data and cat facts",
   "license": "ISC",
-  "author": "",
+  "author": "Jonnie",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }
