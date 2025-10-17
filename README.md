@@ -60,7 +60,7 @@ Returns user profile information along with a random cat fact from an external A
 
 1. **Clone the repository** (if applicable):
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Jonniie/stage-0.git
    cd stage-0
    ```
 
