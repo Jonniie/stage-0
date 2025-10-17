@@ -144,4 +144,5 @@ The project uses nodemon for development, which automatically restarts the serve
 
 ## License
 
-ISC
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
