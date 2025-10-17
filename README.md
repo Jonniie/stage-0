@@ -28,8 +28,8 @@ Returns user profile information along with a random cat fact from an external A
 {
   "status": "success",
   "user": {
-    "email": "jtech2096@gmail.com",
-    "name": "John Areola",
+   "email": "jack@gmail.com",
+    "name": "Shintoku Rin",
     "stack": "Node.js/Express"
   },
   "timestamp": "2023-12-21T10:30:56.789Z",
@@ -42,8 +42,8 @@ Returns user profile information along with a random cat fact from an external A
 {
   "status": "error message",
   "user": {
-    "email": "jtech2096@gmail.com",
-    "name": "John Areola",
+    "email": "jack@gmail.com",
+    "name": "Shintoku Rin",
     "stack": "Node.js/Express"
   },
   "timestamp": "2023-12-21T10:30:56.789Z",
